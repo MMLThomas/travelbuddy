@@ -22,8 +22,9 @@ ActiveRecord::Schema.define(version: 2020_08_27_121315) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.string "latitude"
-    t.string "longitude"
+    t.string "name"
+    t.float "latitude"
+    t.float "longitude"
     t.string "climate"
     t.string "continent"
     t.integer "temperature"
