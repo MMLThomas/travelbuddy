@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+    locations = Location.create([{name: 'Malibu', climate: 'dry and sunny', continent: 'North America', temperature: 78, language: 'english'}, {name: 'Seattle', climate: 'cool and wet', continent: 'North America', temperature: 70, language: 'english'}, {name: 'Tokyo', climate: 'humid', continent: 'Asia', temperature: 88, language: 'japanese'}, {name: 'Dubai', climate: 'dry and sunny', continent: 'Asia', temperature: 94, language: 'arabic'}, ])

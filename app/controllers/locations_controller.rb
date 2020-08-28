@@ -1,9 +1,19 @@
 class LocationsController < ApplicationController
 
     def index
-        location = Location.all
-        render json: to_json(include: {comments: {only: [:content, :name]})
+        locations = Location.all
+        options = {
+            include: [:comments]
+        }
+        render json: LocationSerializer.new(locations, options)
     end
 
+    def show
+        location = Location.find(params[:id])
+        options = {
+            include: [:comments]
+        }
+        render json: LocationSerializer.new(location, options)
+    end
 
 end
