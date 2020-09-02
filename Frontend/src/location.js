@@ -24,7 +24,6 @@ class Location{
         Location.all.push(this)
     };
 
-    locationImageRefInput = `<input name='imageRef'>`
 
     
 
@@ -35,20 +34,24 @@ class Location{
 
     renderLocation(){
         let location = this;
+
+        // Add location to DOM
         this.element.innerHTML +=
         `<div class="location-details"> 
             <span class="name"><h3>${this.name.toUpperCase()} ${this.stateCountry.toUpperCase()}</h3></span>
             <span class="image"><img src=${this.imageRef} alt="image of ${this.name}" width="400" height="300"></span><br>
-            <span class="temperature">${this.temperature} </span>
-            <span class="climate"> ${this.climate} </span>
-            <span class="language"> ${this.language} </span> 
-            <span class="continent"> ${this.continent} </span> 
+            <span class="temperature">Typical Weather: ${this.temperature}  </span>
+            <span class="climate">Climate: ${this.climate}  </span><br>
+            <span class="language"> Standard Language: ${this.language.toUpperCase()}  </span> 
+            <span class="continent"> Continent: ${this.continent} </span> 
             </div><br>
             <div class="location-buttons">
                 <button class="change-image-button" id="change-image-${this.id}" name="change-image">Change Image</button>
                 <button class="view-comments" id="view-comments-${this.id}" name="view-comments">View Comments</button>
             </div>
         `;
+
+        // Change locations image
         this.element.querySelector(`#change-image-${this.id}`).addEventListener('click', function(event){
             location.element.querySelector(".location-buttons").innerHTML = 
             `<div>
@@ -65,6 +68,8 @@ class Location{
             });
            
         });
+
+        // View and submit location comments  
         this.element.querySelector(`#view-comments-${this.id}`).addEventListener('click', function(event){
             if (this.innerText !== 'Hide Comments'){
                 let commentsAdapter = new CommentsAdapter;
@@ -76,6 +81,7 @@ class Location{
 
                 location.comments_view.innerHTML += location.newComments
 
+                // add comment
                 location.comments_view.querySelector('button').addEventListener('click', function(){
                     let newComment = location.comments_view.querySelector('input').value;
                     commentsAdapter.sendComments(newComment, location.id)
@@ -91,7 +97,6 @@ class Location{
             
         });
 
-        
         return this.element;
     };
 
