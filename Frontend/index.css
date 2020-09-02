@@ -1,0 +1,60 @@
+/* page styling */
+body{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* navigation bar styling */
+.nav-wrapper{
+    border-bottom: 1px solid black;
+    background-color: silver;
+}
+
+.nav-wrapper .page-title{
+    text-align: center;
+}
+
+/* page greeting and info box styling */
+
+.infobox-wrapper{
+    width: auto;
+    margin-top: 200px;
+    padding-left: 25%; padding-right: 25%;
+    border: 1px solid black;
+}
+
+.infobox-wrapper .welcome-text{
+    text-align: center;
+}
+
+.button-container{
+    text-align: center;
+}
+
+/* map styling */
+
+map {
+    height: 100%;
+}
+
+/* location list/feed */
+
+.location-details{
+    text-align: center;
+}
+
+.location-buttons{
+    text-align: center;
+
+}
+
+/* comments style */
+
+.comment{
+    text-align: center;
+}
+
+.add-comments{
+    text-align: center;
+}

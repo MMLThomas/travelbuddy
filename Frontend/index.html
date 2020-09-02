@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel Buddy</title>
+    <!-- <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <stylesheet_link_ 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <link rel="stylesheet" href="index.css">
+    
+  </head>
+  <body>
+
+        <!-- Site nav bar and title -->
+        <header>
+            <nav class='nav-wrapper'>
+                <h1 class="page-title"> Travel Buddy</h1>
+
+            </nav>
+        </header>
+        
+
+        <!-- app info box and instructions -->
+        <div class='infobox-wrapper'>
+            <h3 class='welcome-text'>Welcome to Travel Buddy! <br> Allow us to show you the world</h3>
+            <h3 class='welcome-text'>Click the button below to get started</h3>
+            <div class="button-container">
+            <button class="see-locations-button" name='see-locations-button' value="See Cities">See Cities</button>
+            </div>
+        </div>
+
+        <!-- location feed -->
+
+        <div>
+            <ul class='location-list'>
+
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="branding">
+    <small>&copy; 2020 <strong>Travel Buddy</strong></small>
+  </footer>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="src/location.js"></script>
+<script type="text/javascript" src="src/locationsAdapter.js"></script>
+<script type="text/javascript" src="src/comment.js"></script>
+<script type="text/javascript" src="src/commentsAdapter.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
