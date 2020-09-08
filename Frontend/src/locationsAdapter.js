@@ -9,10 +9,12 @@ class LocationsAdapter{
             .then(res => res.json())
             .then(json => json.data.forEach(element => {
                 let location = new Location(element.attributes)
-                location.attachToDOM()
+                location.fetchLocationWeather()
             })
             );
     }
+
+    
 
     updateImage(imageRef, id){
 

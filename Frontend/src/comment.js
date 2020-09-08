@@ -14,7 +14,6 @@ class Comment{
     
 
     attachToDOM(){
-        this.location.element.append(this.location.comments_view)
         this.location.comments_view.append(this.rendercomment())
     };
 
