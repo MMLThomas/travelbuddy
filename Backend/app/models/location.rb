@@ -21,6 +21,10 @@ class Location < ApplicationRecord
         self.save
     end
 
+    def retrieve_weather
+
+    end
+
 
 
 

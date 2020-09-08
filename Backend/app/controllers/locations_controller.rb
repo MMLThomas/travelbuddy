@@ -19,6 +19,7 @@ class LocationsController < ApplicationController
     def update
         location = Location.find(params[:id])
         location.update(location_params)
+        render json: LocationSerializer.new(location)
     end
 
     private
