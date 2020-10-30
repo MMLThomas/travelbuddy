@@ -1,4 +1,4 @@
-# README
+# READ ME
 
 Travel Buddy is a travel application that allows users to explore and comment on different cities around the world.
 

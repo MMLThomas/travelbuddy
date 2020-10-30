@@ -33,7 +33,27 @@ class Location{
         })
     }
 
+    static sortByWeather(){
+        debugger
+        let locationWeather = Location.all.sort((a, b) => a.temperature - b.temperature)
+        Location.updateDom(locationWeather)
+    }
     
+
+    // static sortByWeather(){
+    //     let locationWeather = Location.all
+    //     locationWeather.sort((a, b) => a.temperature > b.temperature ? 1 : -1 )
+    //     Location.updateDom(locationWeather)
+    // }
+
+    // static sortByWeather(){
+    //     let locationWeather = Location.all
+    //     locationWeather.sort((a, b) => a.temperature > b.temperature ? 1 : -1 )
+    //     Location.updateDom(locationWeather)
+    // }
+    
+    
+
 
     fetchLocationWeather(){
         let thisLocation = this
